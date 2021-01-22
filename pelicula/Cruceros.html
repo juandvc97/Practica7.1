@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css?_cacheOverride=1574773860125" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Varela+Round&display=swap">
+  	<link rel="stylesheet" href="./css/styles.css">
+    <title>Crucero</title>
+  </head>
+  <body>
+
+
+<h1>Cruceros Norte de Europa y Fiordos</h1>
+<div class="container">
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="img/descarga.jfif" class="card-img" alt="..." style="height:450px">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 id="film-title" class="card-title"></h5>
+          <div class="card-text">
+
+            <dl class="row">
+              <dt class="col-sm-3">Descripción</dt>
+              <dd id="film-synopsi" class="col-sm-9"></dd>
+
+              <dt class="col-sm-3">Puerto de salida</dt>
+              <dd id="film-genre" class="col-sm-9">
+                Dibuixos
+              </dd>
+
+              <dt class="col-sm-3">Precios</dt>
+              <dd id="film-premiere" class="col-sm-9">Sí</dd>
+
+              <dt class="col-sm-3 text-truncate">Itinerario</dt>
+              <dd id="film-age" class="col-sm-9"><img src="img/age-tp.png" style="width:20px"/></dd>
+
+              <dt class="col-sm-3 text-truncate">Duración del viaje</dt>
+              <dd id="film-sessions" class="col-sm-9">
+
+              </dd>
+            </dl>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+//atributo: valor
+var pelicula = {
+  "titol":"Fiordos Noruegos",
+  "sinopsi":"8 dias a bordo del MSC Splendida desde Kiel(Alemania)",
+  "genere":"kiel (alemania)",
+  "edat":["kiel (alemania)","Bergen (noruega)", "Nordfjordeid", "Flam (noruega)", "Stavanger (noruega)", "Kiel (alemania)"],
+  "estrena":["Cabina interior 1.199€", "cabina exterior 1.389€", "Canina con balcón 1.589€"],
+  "sessions":["inicia:08/08 ","termina: 16/08"]
+}
+
+  document.getElementById("film-title").innerHTML= pelicula.titol;
+  document.getElementById("film-synopsi").innerHTML= pelicula.sinopsi;
+  document.getElementById("film-genre").innerHTML= pelicula.genere;
+  document.getElementById("film-age").innerHTML= pelicula.edat;
+ 
+  document.getElementById("film-premiere").innerHTML= pelicula.estrena;
+
+  var contenidorSessions = document.getElementById("film-sessions");
+
+  for (let hora of pelicula.sessions) {
+    contenidorSessions.innerHTML+=`<span class="badge badge-info">${hora}</span> `;
+  }
+
+
+</script>
+</body>
+</html>

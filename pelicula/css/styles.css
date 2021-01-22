@@ -1,0 +1,16 @@
+h1{text-align:center;}
+.media img{
+	width:100px;
+}
+
+.nav-item .active{
+	border-bottom: 2px solid rgb(167, 161, 161);
+}
+
+.card-title{
+
+	font-family:'Varela Round', sans-serif;
+	color:#257cff;
+	font-size: 40px;
+	border-bottom: 2px dotted rgb(139, 139, 139);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    <title>Taula empleats</title>
+  </head>
+  <body>
+    <h1>Taula empleats</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"># </th>
+          <th scope="col">Nom i llinatges</th>
+          <th scope="col">Telefon</th>
+          <th scope="col">Especialitat</th>
+          <th scope="col">Departaments</th>
+        </tr>
+      </thead>
+      <tbody id="lista">
+      </tbody>
+    </table>
+<script type="text/javascript">
+let lista = [
+  ["1", "Pere Ferrer", "648-868-769", "seguritat informàtica", "Sistemes"],
+  ["3", "Joan Gomila", "631-445-779", "Python", "Desenvolupament"],
+  ["2", "Sara Gómez", "653-378-889", "Java", "Desenvolupament"],
+  ["4", "Xavi Caraibe", "908-456-789", "Nónimes", "Administració"]
+];
+ 
+for(let N of lista){
+let fila = `
+  <tr>
+    <th scope="row">${N[0]}</th>
+    <td>${N[1]}</td>
+    <td>${N[2]}</td>
+    <td>${N[3]}</td>
+    <td>${N[4]}</td>
+  </tr>
+  `;
+  document.getElementById("lista").innerHTML+=fila;
+ 
+}
+ 
+</script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
